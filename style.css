@@ -1,0 +1,36 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #87CBB9;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.input-con{
+    position: relative;
+}
+.input-con input{
+    width: 250px;
+    height: 50px;
+    border: none;
+    background-color: white;
+    padding-left: 20px;
+    border-radius: 10px;
+    outline: none;
+    transition: .3s;
+}
+.input-con input:hover{
+    transform: scale(1.05);
+}
+.input-con span{
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    color: #87CBB9;
+    display: none;
+    cursor: pointer;
+}

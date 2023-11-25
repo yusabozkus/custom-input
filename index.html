@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Input Design - With Fuez Code</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+</head>
+<body>
+    <div class="input-con">
+        <input oninput="showBtn(this)" type="password" placeholder="Enter Password" id="password">
+        <span onclick="clickShowBtn(this)" id="showBtn"><i><i class="fa-solid fa-eye"></i></i></span>
+    </div>
+    <script>
+        isClick = false;
+
+        function showBtn(input) {
+            let showBtn = document.getElementById("showBtn")
+
+            if(input.value.length > 0){
+                showBtn.style.display = "block"
+            }else{
+                showBtn.style.display = "none"
+            }
+        }
+
+        function clickShowBtn(button) {
+            let password = document.getElementById("password")
+
+            if(!isClick){
+                password.type = "text"
+                button.innerHTML = `<i class="fa-solid fa-eye-slash"></i>`
+                isClick = true;
+            }else{
+                password.type = "password"
+                button.innerHTML = `<i class="fa-solid fa-eye"></i>`
+                isClick = false;
+            }
+        }
+    </script>
+</body>
+</html>
